@@ -33,6 +33,15 @@ class BadgePositioned extends StatelessWidget {
     }
 
     if (position.isCenter) {
+      if (position.top != 0) {
+        return Positioned.fill(
+          top: position.top,
+          child: Align(
+            alignment: Alignment.center,
+            child: child,
+          ),
+        );  
+      }
       return Positioned.fill(
         child: Align(
           alignment: Alignment.center,

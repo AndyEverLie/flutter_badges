@@ -32,6 +32,9 @@ class CalculationUtils {
     }
 
     if (position.isCenter) {
+      if (position.top != 0) {
+        return EdgeInsets.only(top: position.top);  // getUpdatedPadding(position.top) 计算不能为负值
+      }
       return EdgeInsets.zero;
     }
 
